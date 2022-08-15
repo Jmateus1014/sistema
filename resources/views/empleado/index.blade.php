@@ -8,6 +8,7 @@
             </div>
         @endif
         <a href="{{ url('empleado/create') }}" class="btn btn-success">Registrar nuevo empleado</a>
+        <a href="{{ url('empleado/pdf') }}" class="btn btn-dark" type="button">Generar PDF</a>
         <br><br>
         <table class="table table-light">
             <thead class="thead-dark">

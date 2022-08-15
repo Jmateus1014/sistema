@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Empleado;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EmpleadoController;
 
@@ -17,6 +18,7 @@ use App\Http\Controllers\EmpleadoController;
 Route::get('/', function () {
     return view('auth.login');
 });
+Route::get('/empleado/pdf',[EmpleadoController::class,'pdf']);
 Route::resource('empleado',EmpleadoController::class)->middleware('auth');
 Auth::routes(['register'=>false,'reset'=>false]);
 

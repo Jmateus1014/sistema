@@ -18,6 +18,16 @@ class EmpleadoController extends Controller
         $datos['empleados']=Empleado::paginate(1);
         return view('empleado.index',$datos);
     }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function pdf()
+    {
+        $datos['empleados']=Empleado::All();
+        return view('empleado.pdf',$datos);
+    }
 
     /**
      * Show the form for creating a new resource.
